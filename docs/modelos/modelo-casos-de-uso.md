@@ -256,25 +256,76 @@ No se requieren preguntas sobre el comportamiento cubierto por el acta.
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:**
+UC-21 · Buscar recetas
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** 
+La persona usuaria quiere localizar una receta que cumpla sus criterios de búsqueda y consultar su detalle.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** 
+Usuario registrado como actor principal.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** 
+1. El usuario tiene una sesión iniciada en la aplicación.
+2. Los requisitos asociados al caso de uso siguen vigentes.
+3. No se aplica automáticamente un filtro de alergias del perfil del usuario.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:**
+El usuario inicia la búsqueda de recetas desde la aplicación.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+1. El usuario accede a la funcionalidad de búsqueda de recetas.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+2. El sistema muestra las opciones de búsqueda disponibles para el alcance de UC-21: búsqueda por texto, selección de ingredientes que se desean incluir y selección de ingredientes que se desean excluir.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+3. El usuario introduce una palabra o frase y/o selecciona los ingredientes que desea incluir o excluir. Puede añadir o retirar selecciones antes de ejecutar la búsqueda.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+4. El usuario solicita ejecutar la búsqueda.
 
-**Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+5. El sistema comprueba que se ha indicado al menos un criterio y que ningún ingrediente está seleccionado simultáneamente para incluirlo y excluirlo.
+
+6. El usuario selecciona una de las recetas mostradas.
+
+7. El usuario consulta la información de la receta y puede volver a los resultados conservando los criterios y el orden de la última búsqueda.
+
+**Extensiones (flujos alternativos):** 
+5a. No se ha indicado ningún criterio.
+
+1. El sistema solicita al usuario que introduzca al menos un criterio de búsqueda.
+
+2. El sistema conserva la búsqueda sin ejecutar.
+
+3. El usuario puede introducir criterios y continuar desde el paso 3 del escenario principal o terminar la consulta.
+
+5b. Un ingrediente está seleccionado para incluirlo y excluirlo simultáneamente.
+
+1. El sistema señala el conflicto entre los criterios.
+
+2. El sistema no ejecuta la búsqueda.
+
+3. El usuario corrige las selecciones y vuelve al paso 4 del escenario principal, o termina la consulta.
+
+6a. No se encuentran recetas que cumplan los criterios.
+1. El sistema informa de que no hay resultados para la búsqueda realizada y conserva los criterios introducidos.
+2. El sistema muestra las sugerencias separadas de los resultados, sin presentarlas como recetas que cumplen la búsqueda original.
+
+6b. El sistema no puede completar la búsqueda.
+
+1. El sistema informa del problema que impide completar la búsqueda.
+2. El sistema no presenta el fallo como una búsqueda sin resultados.
+3. Se conservan los criterios de la última búsqueda.
+4. El usuario puede reintentar la búsqueda o terminar la consulta.
+
+**Postcondiciones:** 
+1. Se muestran las recetas publicadas y validadas que cumplen todos los criterios de búsqueda, ordenadas de más reciente a más antigua.
+2. El usuario puede consultar el detalle de una receta seleccionada.
+3. Si vuelve a los resultados, se conservan los criterios y el orden de la última búsqueda
+
+**Reglas y NFR pertinentes:**
+FR-085, FR-086 y FR-087: Respaldan los criterios de búsqueda por texto, ingredientes y exclusiones.
+
+**Preguntas abiertas:**
+Si el sistema no puede completar la búsqueda o cargar el detalle, informa del problema. No presenta el fallo como una búsqueda sin resultados.
 
 ## 7 Continuidad entre iteraciones
 
