@@ -276,7 +276,7 @@ El usuario inicia la búsqueda de recetas desde la aplicación.
 **Escenario principal de éxito:** 
 1. El usuario accede a la funcionalidad de búsqueda de recetas.
 
-2. El sistema muestra las opciones de búsqueda disponibles para el alcance de UC-21: búsqueda por texto, selección de ingredientes que se desean incluir y selección de ingredientes que se desean excluir.
+2. El sistema muestra las opciones de búsqueda disponibles.
 
 3. El usuario introduce una palabra o frase y/o selecciona los ingredientes que desea incluir o excluir. Puede añadir o retirar selecciones antes de ejecutar la búsqueda.
 
