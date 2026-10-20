@@ -223,25 +223,36 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-05 · Actualizar perfil
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** El usuario quiere actualizar su propio perfil y conservar los cambios.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Usuario registrado como actor principal.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** La persona ya tiene una cuenta activa y una sesión iniciada.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario solicita actualizar su perfil.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+1. El usuario solicita actualizar su perfil. 
+2. El sistema presenta los datos actuales y distingue los valores editables de los que permanecen fijos.
+3. El usuario modifica los valores permitidos.
+4. El usuario solicita corregir los datos.
+5. el sistema guarda conjuntamente los cambios y confirma que el perfil se ha actualizado.
+6. El sistema confirma la actualización.
 
 **Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+1. Condición y vinculación con el paso 5.
+2. El sistema identifica los datos afectados y explica la corrección necesaria.
+3. El usuario modifica los valores
 
 **Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
 
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+NFR-010. Todas las pantallas
 
 **Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+No se requieren preguntas sobre el comportamiento cubierto por el acta.
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
