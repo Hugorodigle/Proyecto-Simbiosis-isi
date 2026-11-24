@@ -6,6 +6,6 @@ Modelos y diagramas propios del Proyecto Simbiosis (por ejemplo, modelos de domi
 
 | Documento | Finalidad |
 | --- | --- |
-| | |
+| Modelo de dominio | Documento de trabajo que incorpora los diagramas de clase resultado del análisis textual|
 
 Cada modelo nuevo debe añadirse a esta carpeta en Markdown (o como diagrama embebido en Markdown) y listarse en la tabla anterior.
